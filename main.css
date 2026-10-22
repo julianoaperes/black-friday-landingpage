@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	/* Include padding and borders in the declared width and height. */
+	box-sizing: border-box;
+}
+body {
+	/* Remove the browser’s default space around the body.
+       Already handled by the reset above. */
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	/* Give lines of text more breathing room. */
+	line-height: 1.6;
+	color: #071a38;
+	background-color: #f5f7fa;
+}
+img {
+	display: block;
+	/* Prevent images from exceeding their containers. */
+	max-width: 100%;
+	/* Preserve image proportions when the width changes. */
+	height: auto;
+}
+/* Center content, limit its width, and leave space on both sides. */
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin-inline: auto;
+	padding-inline: 20px;
+}
+header {
+	background-color: #fff;
+	padding-block: 20px;
+}
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* Allow navigation to move below the logo when space runs out. */
+	flex-wrap: wrap;
+	/* Keep space between the logo and navigation. */
+	gap: 20px;
+}
+.logo {
+	width: 220px;
+	height: auto;
+}
+header nav ul {
+	display: flex;
+	gap: 24px;
+	list-style: none;
+	/* Allow navigation items to continue onto another row. */
+	flex-wrap: wrap;
+}
+header nav a {
+	color: #071a38;
+	font-weight: bold;
+	text-decoration: none;
+}
+/* Highlight a navigation link when the pointer is over it. */
+header nav a:hover {
+	color: #005565;
+	text-decoration: underline;
+}
+/* Show which header link is selected during keyboard navigation. */
+header a:focus-visible {
+	outline: 3px solid #005565;
+	outline-offset: 4px;
+}
+#home {
+	background-color: #071a38;
+	color: #fff;
+	padding-block: 64px;
+}
+#home h1 {
+	font-size: 2.5rem;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+.hero-description {
+	max-width: 60ch;
+	margin-bottom: 20px;
+}
+.hero-button {
+	display: inline-block;
+	padding: 12px 24px;
+	background-color: #b5f522;
+	color: #071a38;
+	text-decoration: none;
+	border-radius: 6px;
+	font-weight: bold;
+}
+.hero-button:hover {
+	background-color: #d0ff66;
+}
+.hero-button:focus-visible {
+	outline: 3px solid #fff;
+	outline-offset: 4px;
+}
+#offers {
+	padding-block: 64px;
+}
+#offers h2 {
+	font-size: 2rem;
+	line-height: 1.2;
+	margin-bottom: 32px;
+}
+.product-list article {
+	background-color: #fff;
+	padding: 24px;
+	border-radius: 12px;
+}
+.product-list img {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+	margin-bottom: 20px;
+}
+.product-list h3 {
+	font-size: 1.25rem;
+	margin-bottom: 12px;
+}
+.product-list p {
+	margin-bottom: 12px;
+}
+.product-list strong {
+	font-size: 1.5rem;
+	color: #005565;
+}
+.discount {
+	display: inline-block;
+	padding: 8px 12px;
+	background-color: #b5f522;
+	color: #071a38;
+	font-weight: bold;
+	border-radius: 4px;
+}
+
+.product-list {
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 24px;
+}
+/* Show three equal product columns when the viewport is at least 1000px wide. */
+@media (min-width: 1000px) {
+	.product-list {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
