@@ -84,7 +84,8 @@ header a:focus-visible {
 	max-width: 60ch;
 	margin-bottom: 20px;
 }
-.hero-button {
+.hero-button,
+.contact-button {
 	display: inline-block;
 	padding: 12px 24px;
 	background-color: #b5f522;
@@ -138,6 +139,61 @@ header a:focus-visible {
 	font-weight: bold;
 	border-radius: 4px;
 }
+#benefits {
+	background-color: #fff;
+	padding-block: 64px;
+}
+#benefits ul {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 24px;
+	list-style: none;
+}
+#benefits h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 32px;
+}
+#benefits h3 {
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 32px;
+	color: #071a38;
+}
+#benefits p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+}
+#contact {
+	background-color: #071a38;
+	padding-block: 64px;
+}
+#contact h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 32px;
+	color: #fff;
+}
+#contact p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+	color: #fff;
+	margin-bottom: 12px;
+}
+#contact a {
+	text-decoration: none;
+}
+.contact-button:hover {
+	background-color: #d0ff66;
+}
+#contact a:focus-visible {
+	outline: 3px solid #fff;
+	outline-offset: 4px;
+}
 
 .product-list {
 	list-style: none;
@@ -147,7 +203,8 @@ header a:focus-visible {
 }
 /* Show three equal product columns when the viewport is at least 1000px wide. */
 @media (min-width: 1000px) {
-	.product-list {
+	.product-list,
+	#benefits ul {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 }
